@@ -7,5 +7,7 @@ defmodule EPClassWeb.Router do
 
   scope "/api", EPClassWeb do
     pipe_through :api
+
+    resources("/users", UserController, except: [:edit, :new])
   end
 end
